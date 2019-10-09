@@ -9,7 +9,11 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
+    "buefy": "^0.8.5",
+    "cleave.js": "^1.5.3",
     "core-js": "^2.6.5",
+    "material-design-icons": "^3.0.1",
+    "vee-validate": "^3.0.11",
     "vue": "^2.6.10",
     "vue-router": "^3.0.3",
     "vuex": "^3.0.1"

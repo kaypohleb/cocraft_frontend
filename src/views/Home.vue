@@ -1,8 +1,9 @@
 <template>
-  <div class="home">
-    <HelloWorld msg="cocraft"/>
+  <div class="hello">
+    <h1>HelloWorld!</h1>
   </div>
 </template>
+
 
 <script>
 // @ is an alias to /src
@@ -10,8 +11,9 @@ import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
   name: 'home',
-  components: {
-    HelloWorld
+  props: {
+    msg: String
   }
 }
 </script>
+

@@ -1,7 +1,17 @@
 <template>
     <header class="header">
-        <img class="logo" src="@/assets/newlogo.png"/>
+        
+        <router-link to="/">
+            <img class="logo" src="@/assets/newlogo.png"/>
+        </router-link>
+        <div class = "nav_bar">
+        <router-link to="/projects">PROJECTS</router-link>
+        <router-link to="/jobs">JOBS</router-link>
+        <router-link to="/submissions">SUBMISSIONS</router-link>
+        <router-link to="/about">ABOUT</router-link>
+        </div>
     </header>
+    
 </template>
 
 <script>
@@ -12,8 +22,12 @@ export default {
 </script>
 
 <style scoped>
+    .nav_bar{
+        margin-left:50px;
+        display: inline-block;
+    }
     .logo{
-        height: 50px;
+        height: 100px;
         margin-left: 10px;
     }
     .header{
@@ -24,7 +38,8 @@ export default {
     }
     
     .header a{
-        color:#FFF;
+        font-family: 'Raleway Medium', sans-serif;
+        color:#000;
         padding-right:5px;
     }
     

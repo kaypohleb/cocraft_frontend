@@ -1,6 +1,6 @@
 @charset "utf-8"
 // Import a Google Font
-@import url('https://fonts.googleapis.com/css?family=Raleway|Noto+Sans|Source+Code+Pro&display=swap')
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,600,800|Noto+Sans|Source+Code+Pro&display=swap')
 
 
 $black:        hsl(0, 0%, 4%)
@@ -10,7 +10,7 @@ $black-ter:    hsl(0, 0%, 14%)
 $grey-darker:  hsl(0, 0%, 21%)
 $grey-dark:    hsl(0, 0%, 29%)
 $grey:         hsl(0, 0%, 48%)
-$grey-light:   hsl(0, 0%, 71%)
+$grey-light: hsl(0, 0%, 75%)
 $grey-lighter: hsl(0, 0%, 86%)
 
 $white-ter:    hsl(0, 0%, 96%)
@@ -29,6 +29,15 @@ $family-title: $family-styled
 
 .is-family-styled
   font-family: $family-styled
+
+.is-family-title
+  font-family: $family-styled
+  font-weight: 800
+
+.is-family-header
+  font-family: $family-styled
+  font-weight: 600
+
 
 // Text colors
 
@@ -118,7 +127,6 @@ $speed: 87ms
 
 .ccgradientbutton
   @extend .is-ccgradient
-  @extend .has-text-weight-bold
   @extend .has-text-white
   color: $white
 

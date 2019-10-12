@@ -1,0 +1,161 @@
+@charset "utf-8"
+// Import a Google Font
+@import url('https://fonts.googleapis.com/css?family=Raleway|Noto+Sans|Source+Code+Pro&display=swap')
+
+
+$black:        hsl(0, 0%, 4%)
+$black-bis:    hsl(0, 0%, 7%)
+$black-ter:    hsl(0, 0%, 14%)
+
+$grey-darker:  hsl(0, 0%, 21%)
+$grey-dark:    hsl(0, 0%, 29%)
+$grey:         hsl(0, 0%, 48%)
+$grey-light:   hsl(0, 0%, 71%)
+$grey-lighter: hsl(0, 0%, 86%)
+
+$white-ter:    hsl(0, 0%, 96%)
+$white-bis:    hsl(0, 0%, 98%)
+$white:        hsl(0, 0%, 100%)
+
+
+// Font variables
+$family-sans-serif: "Noto Sans", "Helvetica", "Arial" sans-serif
+$family-monospace: "Source Code Pro", monospace
+$family-styled: "Raleway", "Noto Sans", sans-serif
+
+$family-primary: $family-styled
+$family-secondary: $family-sans-serif
+$family-title: $family-styled
+
+.is-family-styled
+  font-family: $family-styled
+
+// Text colors
+
+$text: $black-ter
+$text-invert: #fff
+$text-light: $grey-darker
+$text-strong: $black-bis
+
+//Colors
+
+$red: #f2538f
+// danger
+$blue: hsl(238, 71%, 53%) //links
+$green: hsl(115, 44%, 47%)
+//success
+$yellow: hsl(61, 100%, 65%)
+//warning
+
+$ccorange: #F9B246
+$orange: $ccorange
+
+$secondary: $ccorange
+
+$primary: #F36E63
+$info: $ccorange    //light primary
+$success: $green
+$warning: $yellow
+$danger: $red
+
+$light: $white-ter
+$dark: $grey-darker
+
+// Invert colors
+
+$primary-invert: $white-bis
+$info-invert: hsl(0, 0%, 14%)
+
+// Background
+
+$body-background-color: $white-ter
+$background: $white-bis
+
+
+// Border
+
+$border: $grey-lighter
+$border-hover: $primary
+
+//Code and pre
+$code: $primary
+$code-background: $white-ter
+
+$pre: $text
+$pre-background: $background
+
+
+//Links
+
+$link: $primary
+$link-invert: $primary-invert
+$link-visited: $ccorange
+
+$link-hover: $grey-darker
+$link-hover-border: $link
+
+$link-focus: $grey-darker
+$link-focus-border: $link
+
+$link-active: $primary
+$link-active-border: $grey-dark
+
+//Misc
+
+$easing: ease-out
+$radius-small: 0px  //no rounded boxes for us!
+$radius: 0px
+$radius-large: 0px
+$radius-rounded: 290486px
+$speed: 87ms
+
+/*** Mighty gradients ***/
+
+.is-ccgradient
+  background: $primary  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, $primary, $secondary)  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, $primary, $secondary) /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+.ccgradientbutton
+  @extend .is-ccgradient
+  @extend .has-text-weight-bold
+  @extend .has-text-white
+  color: $white
+
+/*** Works on common browsers ***/
+::selection
+  background-color: $primary
+  color: #fff
+
+
+/*** Mozilla based browsers ***/
+::-moz-selection
+  background-color: $primary
+  color: #fff
+
+
+/***For Other Browsers ***/
+::-o-selection
+  background-color: $primary
+  color: #fff
+
+
+::-ms-selection
+  background-color: $primary
+  color: #fff
+
+
+/*** For Webkit ***/
+::-webkit-selection
+  background-color: $primary
+  color: #fff
+
+
+// Update some of Bulma's component variables
+//$body-background-color: $beige-lighter
+//$control-border-width: 2px
+//$input-border-color: transparent
+//$input-shadow: none
+
+@import "~bulma"
+@import "~buefy/src/scss/buefy"

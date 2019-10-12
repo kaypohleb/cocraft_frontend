@@ -4,7 +4,7 @@ import router from './router'
 import store from './store'
 
 import Buefy from 'buefy'
-//import '../../../sass/quest/cocraftstyles.sass' //already includes importing bulma and buefy css.
+import './sass/cocraftgeneral.sass' //already includes importing bulma and buefy css.
 
 //material-icons
 Vue.config.productionTip = false;

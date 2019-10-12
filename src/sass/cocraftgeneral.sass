@@ -35,6 +35,9 @@ $family-title: $family-styled
   font-weight: 700
   letter-spacing: 0.05rem
 
+.is-family-header
+  font-family: $family-styled
+  font-weight: 600
 
 // Text colors
 
@@ -135,8 +138,8 @@ $speed: 87ms
 
 .is-ccgradient
   background: $primary  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, $primary, $secondary)  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, $primary, $secondary) /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: -webkit-linear-gradient(to right, $primary 50%, $secondary)  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, $primary 50%, $secondary) /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 .ccgradientbutton
   @extend .is-ccgradient

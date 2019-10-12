@@ -5,7 +5,7 @@
                 <img class="logo" style="height:50px"  src="../../assets/newlogo.png"/>
             </router-link>
             <div class="level-right" style="margin-right:1rem">
-                <b-button class="ccgradientbutton slight-round is-family-title" style="padding:0 1rem;margin-right: 1rem">sign in</b-button>
+                <b-button class="ccgradientbutton slight-round is-family-title" style="border:none;padding:0 1.1rem;margin-right: 1rem">sign in</b-button>
                 <a role="button">
                     <i class="material-icons is-size-1 img-button-white" style="margin: 0 0.3rem">menu</i>
                 </a>

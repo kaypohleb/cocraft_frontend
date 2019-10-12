@@ -30,6 +30,20 @@ export default {
   padding: 30px;
 }
 
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FF0000;
+}
+
 #nav a {
   font-weight: bold;
   color: #2c3e50;

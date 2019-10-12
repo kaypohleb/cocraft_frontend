@@ -6,16 +6,22 @@
             </router-link>
             <div class="level-item has-text-centered">
                 <div class="nav-bar level is-size-4">
-                    <router-link  to="/projects" class="level-item nav_bar is-family-header has-text-grey-light">PROJECTS</router-link>
-                    <router-link  to="/jobs" class="level-item nav_bar is-family-header has-text-grey-light">JOBS</router-link>
-                    <router-link  to="/submissions" class="level-item nav_bar is-family-header has-text-grey-light">SUBMISSIONS</router-link>
-                    <router-link  to="/about" class="level-item nav_bar is-family-header has-text-grey-light">ABOUT</router-link>
+                    <router-link  to="/projects" class="level-item nav_bar is-family-title has-text-grey-light">PROJECTS</router-link>
+                    <router-link  to="/jobs" class="level-item nav_bar is-family-title has-text-grey-light">JOBS</router-link>
+                    <router-link  to="/submissions" class="level-item nav_bar is-family-title has-text-grey-light">SUBMISSIONS</router-link>
+                    <router-link  to="/about" class="level-item nav_bar is-family-title has-text-grey-light">ABOUT</router-link>
                 </div>
             </div>
             <div class="level-right" style="margin-right:1rem">
-                <i class="material-icons is-size-1" style="margin: 0 0.3rem">notifications</i>
-                <i class="material-icons is-size-1" style="margin: 0 0.3rem">account_circle</i>
-                <i class="material-icons is-size-1" style="margin: 0 0.3rem">menu</i>
+                <a role="button">
+                    <i class="material-icons is-size-1 img-button" style="margin: 0 0.3rem">notifications</i>
+                </a>
+                <a role="button">
+                    <i class="material-icons is-size-1 img-button" style="margin: 0 0.3rem">account_circle</i>
+                </a>
+                <a role="button">
+                    <i class="material-icons is-size-1 img-button" style="margin: 0 0.3rem">menu</i>
+                </a>
             </div>
         </div>
     </header>
@@ -32,7 +38,7 @@ export default {
 <style scoped lang="sass">
     .nav_bar
         margin-left: 1rem
-        
+
     .logo
         height: 100px
         margin-left: 10px
@@ -43,5 +49,6 @@ export default {
         text-align: left
         padding: 5px
 
-
+    .router-link:hover
+        color: black
 </style>

@@ -14,6 +14,7 @@
                                 </p>
                             </div>
                             <div class="column is-two-thirds" style="padding:0 2.5rem">
+                                <transition name="fade" mode="out-in">
                                 <div v-if="signed" class="is-size-3 is-family-title has-text-white" style="text-align:left;line-height:3.4rem">
                                     <p style="text-align:center">sign up</p>
                                     <input v-model="name" placeholder="name"
@@ -27,7 +28,8 @@
                                     <br>
                                     <b-button class="ccgradientbutton is-rounded is-family-title is-size-5" style="margin:1rem 0;padding:0 2.6rem;border:none;position:relative;float:right;">join the cult</b-button>
                                 </div>
-                                <div v-else>
+                                </transition>
+                                <div v-if="!signed">
                                     <p class="is-size-3 is-family-header has-text-white" style="text-align:left;line-height:3.4rem;font-size:1rem">
                                     This site is a platform for people with different skillsets to work together.</p>
                                     <b-button class="is-white is-outlined is-rounded is-family-styled is-size-4" style="height:3.4rem;margin:0.4rem 0;width:100%;border-width:0.2rem;">view our community guidelines</b-button>

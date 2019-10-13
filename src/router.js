@@ -5,6 +5,7 @@ import About from './views/About.vue'
 import Projects from './views/Projects.vue'
 import Jobs from './views/Jobs.vue'
 import Submissions from './views/Submissions.vue'
+import Welcome from './views/Welcome.vue'
 
 Vue.use(Router)
 
@@ -41,6 +42,11 @@ export default new Router({
       name: 'submissions',
       component: Submissions
      
+    },
+    {
+      path: '/welcome/:login',
+      name: 'welcome',
+      component: Welcome
     }
   ]
 })

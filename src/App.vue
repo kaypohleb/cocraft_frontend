@@ -2,7 +2,6 @@
   <div id="app">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
           rel="stylesheet" />
-    <Header />
     <router-view/>
   </div>
 </template>

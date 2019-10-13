@@ -1,5 +1,6 @@
 <template>
   <main>
+    
     <section class="herobg">
         <div class="shade">
             <HeaderHome/>
@@ -19,16 +20,16 @@
                                     <p style="text-align:center">sign up</p>
                                     <input v-model="name" placeholder="name"
                                            autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"
-                                           style=""></input><br>
+                                           style=""><br>
                                     <input v-model="email" placeholder="email address"
-                                           autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></input><br>
-                                    <input type="password" v-model="password" placeholder="password" id="inputlast"
-                                           autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" style="width:90%"></input>
-                                    <input type="button" style="width:10%;cursor:pointer;font-size:2rem;vertical-align:bottom;" class="material-icons" value="remove_red_eye"></input>
+                                           autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"><br>
+                                    <input type="passwordFieldType" v-model="password" placeholder="password" id="inputlast"
+                                           autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" style="width:90%">
+                                    <input type="button" style="width:10%;cursor:pointer;font-size:2rem;vertical-align:bottom;" class="material-icons" value="remove_red_eye">
                                     <br>
-                                    <b-button class="ccgradientbutton is-rounded is-family-title is-size-5" style="margin:1rem 0;padding:0 2.6rem;border:none;position:relative;float:right;">join the cult</b-button>
+                                    <b-button @click="join(name)" class="ccgradientbutton is-rounded is-family-title is-size-5" style="margin:1rem 0;padding:0 2.6rem;border:none;position:relative;float:right;">join the cult</b-button>
                                 </div>
-                                </transition>
+                                </transition>f
                                 <div v-if="!signed">
                                     <p class="is-size-3 is-family-header has-text-white" style="text-align:left;line-height:3.4rem;font-size:1rem">
                                     This site is a platform for people with different skillsets to work together.</p>
@@ -61,8 +62,8 @@
       <br>
       <b-button class="ccgradientbutton is-rounded is-family-title">signup</b-button>
       <br>
-      <b-button class="ccgradientbutton is-rounded is-family-title" style="padding: 0 2.5rem">join the cult</b-button>
-
+    <b-button class="ccgradientbutton is-rounded is-family-title" style="padding: 0 2.5rem">join the cult</b-button>
+     
     </section>
   </main>
 </template>
@@ -116,14 +117,29 @@
 // @ is an alias to /src
 import HelloWorld from '../components/HelloWorld.vue'
 import HeaderHome from '../components/layout/HeaderHome.vue'
+import { sign } from 'crypto'
 
 export default {
   name: 'home',
-  data: function() {
-      return {
-          signed: false
+  data(){
+      return{
+          name:'',
+          email:'',
+          password:'',
+        signed:false
+      }
+    
+  },
+
+      
+  methods:{
+      join(name){
+          
+          this.$router.push({name:'welcome',params:{login:name}})
       }
   },
+  
+  
   props: {
     msg: String
   },

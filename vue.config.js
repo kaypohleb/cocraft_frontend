@@ -39,5 +39,8 @@ module.exports = {
   // }
   chainWebpack: config => {
     config.module.rule('vue').uses.delete('cache-loader');
+  },
+  sass: {
+    indentedSyntax:true
   }
 }

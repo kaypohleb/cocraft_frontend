@@ -1,6 +1,6 @@
 <template>
   <main>
-    
+
     <section class="herobg">
         <div class="shade">
             <HeaderHome/>
@@ -23,15 +23,15 @@
                                            style=""><br>
                                     <input v-model="email" placeholder="email address"
                                            autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"><br>
-                                    <input type="passwordFieldType" v-model="password" placeholder="password" id="inputlast"
+                                    <input :type="passwordFieldType" v-model="password" placeholder="password" id="inputlast"
                                            autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" style="width:90%">
-                                    <input type="button" style="width:10%;cursor:pointer;font-size:2rem;vertical-align:bottom;" class="material-icons" value="remove_red_eye">
+                                    <input type="button" @click="passwordShow=!passwordShow" style="width:10%;cursor:pointer;font-size:2rem;vertical-align:bottom;" class="material-icons" value="remove_red_eye">
                                     <br>
                                     <b-button @click="signup()" class="ccgradientbutton is-rounded is-family-title is-size-5" style="margin:1rem 0;padding:0 2.6rem;border:none;position:relative;float:right;">join the cult</b-button>
                                 </div>
-                                </transition>f
+                                </transition>
                                 <div v-if="!signed">
-                                    <p class="is-size-3 is-family-header has-text-white" style="text-align:left;line-height:3.4rem;font-size:1rem">
+                                    <p class="is-size-3 is-family-header has-text-white" style="text-align:left;line-height:3.4rem;font-size:1rem;">
                                     This site is a platform for people with different skillsets to work together.</p>
                                     <b-button class="is-white is-outlined is-rounded is-family-styled is-size-4" style="height:3.4rem;margin:0.4rem 0;width:100%;border-width:0.2rem;">view our community guidelines</b-button>
                                     <b-button @click="signed=true" class="ccgradientbutton is-rounded is-family-title is-size-4" style="height:3.4rem;margin:0.4rem 0;width:100%;border:none">sign your soul here</b-button>
@@ -46,24 +46,18 @@
         </div>
     </section>
     <section>
-      <h1 class="is-family-title">HelloWorld!</h1>
-      <b-button class="is-rounded is-family-title">signup</b-button>
-      <b-button class="is-primary is-rounded is-family-title">signup</b-button>
-      <b-button class="is-info is-rounded is-family-title">signup</b-button>
-      <b-button class="is-primary is-outlined is-rounded is-family-styled">signup</b-button>
-      <b-button class="is-info is-outlined is-rounded is-family-styled">signup</b-button>
-      <br><br>
-      <b-button class="is-success is-rounded is-family-styled">success</b-button>
-      <b-button class="is-warning is-rounded is-family-styled">warning</b-button>
-      <b-button class="is-danger is-rounded is-family-styled">danger</b-button>
-      <b-button class="is-danger is-outlined is-size-3 is-rounded is-family-title">don-t click this</b-button>
-      <br><br>
-      Mighty Gradients
-      <br>
-      <b-button class="ccgradientbutton is-rounded is-family-title">signup</b-button>
-      <br>
-    <b-button class="ccgradientbutton is-rounded is-family-title" style="padding: 0 2.5rem">join the cult</b-button>
-     
+        <br><br><br>
+        <p class="is-size-3">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+        <div class="hero is-fullheight">
+            <div class="hero-body">
+                <div class="container">
+                    <p class="is-size-3">A life unexamined is a life not worth living.</p>
+                </div>
+            </div>
+        </div>
+        <p class="is-size-6">©CoCraft</p>
+
+
     </section>
   </main>
 </template>
@@ -126,23 +120,29 @@ export default {
           name:'',
           email:'',
           password:'',
-        signed:false
+          signed: false,
+          passwordShow: false
       }
-    
-  },
 
-      
+  },
+    computed: {
+        passwordFieldType: function () {
+            if (this.passwordShow) return 'text';
+            else return 'password';
+        }
+    },
+
   methods:{
       join(name){
-          
+
           this.$router.push({name:'welcome',params:{login:name}})
       },
       signup(){
           alert("This method is not implemented yet")
       }
   },
-  
-  
+
+
   props: {
     msg: String
   },

@@ -27,7 +27,7 @@
                                            autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" style="width:90%">
                                     <input type="button" style="width:10%;cursor:pointer;font-size:2rem;vertical-align:bottom;" class="material-icons" value="remove_red_eye">
                                     <br>
-                                    <b-button @click="join(name)" class="ccgradientbutton is-rounded is-family-title is-size-5" style="margin:1rem 0;padding:0 2.6rem;border:none;position:relative;float:right;">join the cult</b-button>
+                                    <b-button @click="signup()" class="ccgradientbutton is-rounded is-family-title is-size-5" style="margin:1rem 0;padding:0 2.6rem;border:none;position:relative;float:right;">join the cult</b-button>
                                 </div>
                                 </transition>f
                                 <div v-if="!signed">
@@ -136,6 +136,9 @@ export default {
       join(name){
           
           this.$router.push({name:'welcome',params:{login:name}})
+      },
+      signup(){
+          alert("This method is not implemented yet")
       }
   },
   

@@ -26,17 +26,32 @@ export default {
 }
 
 html {
-  overflow: scroll;
+  overflow: auto;
   overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
-  width: 0px;
-  background: transparent;
+   width: 13px;
+ }
+
+::-webkit-scrollbar-track {
+  background: #F36E63;
 }
 
+
 ::-webkit-scrollbar-thumb {
-  background: #FF0000;
+ background: #F9B246;
+ border-radius: 10px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e6a342;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
 }
 
 #nav a {

@@ -3,8 +3,14 @@
     <Header/>
     <main>
       <component :is="currentPageComponent"></component>
-      <br><br><br>
-      <h1>This is a project listing page</h1>
+      <br><br>
+      <section style="margin:auto;max-width:1000px;">
+        <div style="margin:0 3rem;">
+          change views:
+          <b-button @click="currentPageComponent='NewProject'" class="is-primary is-rounded is-size-6">New Project</b-button>
+          <h1>This is a project listing page</h1> <br><br>
+        </div>
+      </section>
       <observer/>
       <!-- If the observer is supposed to be only on the project listing page (not create new project) then this should go into ProjectListing.vue or something     -->
     </main>
@@ -21,7 +27,7 @@ export default {
   name: 'Projects',
   data () {
     return {
-      currentPageComponent: NewProject
+      currentPageComponent: null
     }
   },
   components:{

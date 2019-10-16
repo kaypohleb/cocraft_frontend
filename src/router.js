@@ -22,26 +22,26 @@ export default new Router({
       path: '/about',
       name: 'about',
       component: About
-      
+
     },
     {
       path: '/projects',
       name: 'projects',
       component: Projects
-      
+
     }
     ,
     {
       path: '/jobs',
       name: 'jobs',
       component: Jobs
-  
+
     },
     {
       path: '/submissions',
       name: 'submissions',
       component: Submissions
-     
+
     },
     {
       path: '/welcome/:login',

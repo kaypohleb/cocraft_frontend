@@ -1,7 +1,10 @@
 <template>
   <div class = 'welcome'>
-      <h1> Welcome Back</h1>
-      <h2 class="text-primary text-center">{{this.$route.params.login}}</h2>
+      <Header/>
+      <main>
+          <h1> Welcome Back</h1>
+          <h2 class="text-primary text-center">{{this.$route.params.login}}</h2>
+      </main>
   </div>
 </template>
 

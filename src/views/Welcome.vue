@@ -11,7 +11,10 @@
 <script>
 import Header from "../components/layout/Header.vue"
 export default {
-    name: "Welcome"
+    name: "Welcome",
+    components: {
+        Header
+    }
 }
 </script>
 

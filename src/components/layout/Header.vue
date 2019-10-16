@@ -1,6 +1,6 @@
 <template>
     <header class="header">
-        <div class="level is-hidden-mobile" style="padding: 1.4rem 0">
+        <div class="level is-hidden-touch" style="padding: 1.4rem 0;margin:0 0">
             <router-link to="/" class="level-left" style="margin-left:1rem">
                 <img class="logo" style="height:50px"  src="../../assets/newlogo.png"/>
             </router-link>
@@ -23,6 +23,15 @@
                     <i class="material-icons is-size-1 img-button" style="margin: 0 0.3rem">menu</i>
                 </a>
             </div>
+        </div>
+        <div class="is-flex-touch is-hidden-desktop" width="100%" style="justify-content:space-between">
+            <router-link to="/" style="margin: 1rem 1rem;align-self:flex-start">
+                <img class="logo" style="height:50px"  src="../../assets/newlogo.png"/>
+            </router-link>
+            <span></span>
+            <a style="align-self:center" role="button">
+                <i class="material-icons is-size-2 img-button" style="padding:0 0.3rem;margin:0 0.4rem">menu</i>
+            </a>
         </div>
     </header>
 

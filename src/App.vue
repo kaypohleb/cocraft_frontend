@@ -7,16 +7,14 @@
 </template>
 
 <script>
-  import Header from './components/layout/Header.vue';
+  // import Header from './components/layout/Header.vue';
 
 
 export default {
-  name: 'app',
-  components:{
-    Header
-  }
+  name: 'app'
 }
 </script>
+
 <style>
 #app {
   font-family: 'Raleway', sans-serif;

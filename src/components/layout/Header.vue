@@ -14,7 +14,7 @@
             </div>
             <div class="level-right" style="margin-right:1rem">
                 <a role="button">
-                    <i class="material-icons is-size-1 img-button" style="margin: 0 0.3rem">notifications</i>
+                    <img src="../../assets/svg/horn-01.svg" width="40px" style="margin-right:1rem;" alt="Notifications">
                 </a>
                 <a role="button">
                     <i class="material-icons is-size-1 img-button" style="margin: 0 0.3rem">account_circle</i>

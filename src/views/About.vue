@@ -1,10 +1,10 @@
 <template>
-  <div>
-    <Header/>
     <div class="about">
-      <h1>This is an about page</h1>
+      <Header/>
+      <main>
+        <h1>This is an about page</h1>
+      </main>
     </div>
-  </div>
 </template>
 
 <script>

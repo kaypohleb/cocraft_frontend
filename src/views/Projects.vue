@@ -1,9 +1,10 @@
 <template>
-
   <div class="projects">
     <Header/>
-    <h1>This is a project listing page</h1>
-    <observer/>
+    <main>
+      <h1>This is a project listing page</h1>
+      <observer/>
+    </main>
   </div>
 </template>
 
@@ -13,7 +14,8 @@ import Header from '../components/layout/Header.vue';
 export default {
   name: 'Projects',
   components:{
-    Observer
+    Observer,
+    Header
   }
 }
 </script>

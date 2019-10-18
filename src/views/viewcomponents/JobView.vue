@@ -25,7 +25,12 @@
                               <br><br><br><br><br>
                           </p>
 
-                          <b-button class="is-primary is-rounded" style="padding:0 1rem;align-self:flex-end;">SUBMIT</b-button>
+                          <b-button @click="isComponentModalActive=true" class="is-primary is-rounded" style="padding:0 1rem;align-self:flex-end;">SUBMIT</b-button>
+                          <keep-alive>
+                              <b-modal :active.sync="isComponentModalActive" has-modal-card trap-focus>
+                                  <modal-form v-bind="formProps"></modal-form>
+                              </b-modal>
+                          </keep-alive>
                       </div>
                   </div>
                   <div class="column is-two-fifths;">
@@ -34,7 +39,7 @@
                       </div>
                       <div class="p-head is-family-styled has-text-grey" style="font-size:1rem;border: 1px solid gray;border-radius:8px;width:100%;padding:0.5rem 1rem;min-height:200px">
                           <table width="100%">
-                              <!--  generate this as a table by vue v-for directive    -->
+                              <!-- TODO:  generate this as a table by vue v-for directive ; give title of same name as filename for overflow cases   -->
                               <tr>
                                   <td>flowchart.png</td>
                                   <td><a>link</a></td>
@@ -90,7 +95,12 @@
                   </table>
               </div>
               <br><br><br><br>
-
+              <span class="is-family-title has-text-black is-size-5">comments</span>
+              <br><br>
+              <p class="has-text-primary">
+                  <span class="is-family-title">Kelvin Ng</span>
+                  <br> This is a good starting point for most electrical engineers.
+              </p>
 
 
 
@@ -120,10 +130,27 @@
 </template>
 
 <script>
+import ModalForm from '../../components/JobViewModal'
 
 export default {
     name: 'NewProject',
-    components: {}
+    data () {
+        return {
+            isComponentModalActive: false,
+            formProps: {
+                formSubName: '',
+                formSubDescription: ''
+            }
+        }
+    },
+    computed () {
+        return {
+            keepSubName: function () {
+                if (subName) return subName;
+            }
+        }
+    },
+    components: {ModalForm}
 }
 
 

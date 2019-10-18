@@ -1,6 +1,6 @@
 <template>
   <div>
-      <section style="margin:auto;max-width:1000px;">
+      <section style="margin:auto;max-width:1100px;">
           <div style="margin:0 3rem;">
 
               <p  class="is-family-title is-size-2 has-text-grey-dark" style="text-align:left;">

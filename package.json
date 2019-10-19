@@ -15,6 +15,7 @@
     "material-design-icons": "^3.0.1",
     "vee-validate": "^3.0.11",
     "vue": "^2.6.10",
+    "vue-agile": "^1.0.11",
     "vue-router": "^3.0.3",
     "vuex": "^3.0.1"
   },

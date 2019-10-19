@@ -16,6 +16,8 @@ export default {
 </script>
 
 <style>
+@import 'components/css/agileDots.css';
+
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -62,4 +64,6 @@ html {
 #nav a.router-link-exact-active {
   color: #42b983;
 }
+
+
 </style>

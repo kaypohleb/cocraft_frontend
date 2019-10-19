@@ -1,6 +1,7 @@
 <template>
   <div>
       <section style="margin:auto;max-width:1100px;">
+
           <div style="margin:0 3rem;">
 
               <p  class="is-family-title is-size-3 has-text-grey-dark" style="text-align:left;">
@@ -26,11 +27,9 @@
                           </p>
 
                           <b-button @click="isComponentModalActive=true" class="is-primary is-rounded" style="padding:0 1rem;align-self:flex-end;">SUBMIT</b-button>
-                          <keep-alive>
-                              <b-modal :active.sync="isComponentModalActive" has-modal-card trap-focus>
-                                  <modal-form v-bind="formProps"></modal-form>
-                              </b-modal>
-                          </keep-alive>
+                          <b-modal :active.sync="isComponentModalActive" has-modal-card trap-focus>
+                              <modal-form v-bind="formProps"></modal-form>
+                          </b-modal>
                       </div>
                   </div>
                   <div class="column is-two-fifths;">
@@ -105,24 +104,6 @@
 
 
 
-
-
-
-
-<!--              <br><br><br><br><br><br>-->
-<!--              <div class="is-flex-tablet" style="justify-content:flex-start"> &lt;!&ndash; mobile not implemented yet &ndash;&gt;-->
-<!--                  <b-button class="is-outlined is-rounded is-size-6" style="padding: 0 1rem; border-width:1px; border-color:gray"> <span class="is-family-header">-->
-<!--                      add pictures </span>-->
-<!--                  </b-button>-->
-<!--                  <span class="pic-box"></span>-->
-<!--                  <span class="pic-box"></span>-->
-<!--                  <span class="pic-box"></span>-->
-
-<!--              </div>-->
-
-<!--              <br>-->
-<!--              <b-button class="ccgradientbutton is-rounded is-family-title is-size-5" style="position:relative;float:right;padding:0 3rem;border:none">POST</b-button>-->
-
           </div>
       </section>
 
@@ -133,7 +114,7 @@
 import ModalForm from '../../components/JobViewModal'
 
 export default {
-    name: 'NewProject',
+    name: 'JobView',
     data () {
         return {
             isComponentModalActive: false,

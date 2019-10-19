@@ -1,0 +1,88 @@
+::-webkit-scrollbar {
+    width: 13px;
+}
+
+::-webkit-scrollbar-button {
+
+    background: #F36E63;
+}
+
+/* Buttons */
+::-webkit-scrollbar-button
+{
+    border-style: solid;
+    height: 16px;
+    width: 16px;
+}
+
+
+/* Up */
+::-webkit-scrollbar-button:vertical:decrement
+{
+    border-width: 0 7px 14px 7px;
+    border-color: transparent transparent #fff transparent;
+}
+
+::-webkit-scrollbar-button:vertical:decrement:hover
+{
+    border-color: transparent transparent #dedede transparent;
+}
+
+
+/* Down */
+::-webkit-scrollbar-button:vertical:increment
+{
+    border-width: 14px 7px 0 7px;
+    border-color: #fff transparent transparent transparent;
+}
+
+::-webkit-scrollbar-button:vertical:increment:hover
+{
+    border-color: #dedede transparent transparent transparent;
+}
+
+
+/* Left */
+::-webkit-scrollbar-button:horizontal:decrement
+{
+    border-width: 7px 14px 7px 0;
+    border-color: transparent #fff transparent transparent;
+}
+
+::-webkit-scrollbar-button:horizontal:decrement:hover
+{
+    border-color: transparent #dedede transparent transparent;
+}
+
+
+/* Right */
+::-webkit-scrollbar-button:horizontal:increment
+{
+    border-width: 7px 0 7px 14px;
+    border-color: transparent transparent transparent #fff;
+}
+
+::-webkit-scrollbar-button:horizontal:increment:hover
+{
+    border-color: transparent transparent transparent #dedede;
+}
+
+::-webkit-scrollbar-track {
+    background: #F36E63;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background: #F9B246;
+    border-radius: 10px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    background: #e6a342;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar-corner {
+    background: transparent;
+}

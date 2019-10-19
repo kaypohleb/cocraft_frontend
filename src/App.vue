@@ -17,6 +17,7 @@ export default {
 
 <style>
 @import 'components/css/agileDots.css';
+@import 'components/css/scrollbar.css';
 
 #app {
   -webkit-font-smoothing: antialiased;
@@ -37,29 +38,7 @@ html {
   overflow-x: hidden;
 }
 
-::-webkit-scrollbar {
-   width: 13px;
- }
 
-::-webkit-scrollbar-track {
-  background: #F36E63;
-}
-
-
-::-webkit-scrollbar-thumb {
- background: #F9B246;
- border-radius: 10px;
-}
-
-
-::-webkit-scrollbar-thumb:hover {
-  background: #e6a342;
-  cursor: pointer;
-}
-
-::-webkit-scrollbar-corner {
-  background: transparent;
-}
 
 #nav a {
   font-weight: bold;

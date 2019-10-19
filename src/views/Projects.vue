@@ -15,6 +15,7 @@
                 <b-button @click="currentPageComponent='NewProject'" class="is-primary is-rounded is-size-6">New Project</b-button>
                 <b-button @click="currentPageComponent='JobView'" class="is-primary is-rounded is-size-6">View Job</b-button>
                 <b-button @click="currentPageComponent='ProjectView'" class="is-primary is-rounded is-size-6">View Project</b-button>
+                <b-button @click="currentPageComponent='ProjectList'" class="is-primary is-rounded is-size-6">Find Projects</b-button>
                 <h1>This is a project listing page</h1> <br><br>
               </div>
             </section>
@@ -36,6 +37,7 @@ import Header from '../components/layout/Header.vue';
 import NewProject from './viewcomponents/NewProject.vue';
 import JobView from './viewcomponents/JobView.vue';
 import ProjectView from './viewcomponents/ProjectView.vue'
+import ProjectList from './viewcomponents/ProjectList.vue'
 
 export default {
   name: 'Projects',
@@ -49,7 +51,8 @@ export default {
     Header,
     NewProject,
     JobView,
-    ProjectView
+    ProjectView,
+    ProjectList
   }
 }
 </script>

@@ -184,6 +184,7 @@ export default {
         vertical-align: middle
         font-size: 1.8rem
         color: grey
+        cursor: pointer
 
     .p-head
         font-size: 1.6rem

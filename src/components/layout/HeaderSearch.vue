@@ -1,0 +1,62 @@
+<template>
+    <header class="header">
+        <div class="level is-hidden-touch" style="padding: 1.4rem 0;margin:0 0">
+            <router-link to="/" class="level-left" style="margin-left:1rem">
+                <img class="logo" style="height:50px"  src="../../assets/newlogo.png"/>
+            </router-link>
+            <div class="level-item has-text-centered">
+                <div style="border:1px solid black">
+                    <input v-model="searchBox" placeholder="search projects" id="inputlast"
+                           autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" style="width:90%">
+                    <input type="button" @click="passwordShow=!passwordShow" style="width:10%;cursor:pointer;font-size:2rem;vertical-align:bottom;" class="material-icons" value="search">
+                </div>
+            </div>
+            <div class="level-right" style="margin-right:1rem">
+                <a role="button">
+                    <img src="../../assets/svg/horn-01.svg" width="40px" style="margin-right:1rem;" alt="Notifications">
+                </a>
+                <a role="button">
+                    <i class="material-icons is-size-1 img-button" style="margin: 0 0.3rem">account_circle</i>
+                </a>
+                <a role="button">
+                    <i class="material-icons is-size-1 img-button" style="margin: 0 0.3rem">menu</i>
+                </a>
+            </div>
+        </div>
+        <div class="is-flex-touch is-hidden-desktop" width="100%" style="justify-content:space-between">
+            <router-link to="/" style="margin: 1rem 1rem;align-self:flex-start">
+                <img class="logo" style="height:50px"  src="../../assets/newlogo.png"/>
+            </router-link>
+            <span></span>
+            <a style="align-self:center" role="button">
+                <i class="material-icons is-size-2 img-button" style="padding:0 0.3rem;margin:0 0.4rem">menu</i>
+            </a>
+        </div>
+    </header>
+
+</template>
+
+<script>
+
+export default {
+    name:"Header"
+}
+</script>
+
+<style scoped lang="sass">
+    .nav_bar
+        margin-left: 1rem
+
+    .logo
+        height: 100px
+        margin-left: 10px
+
+    .header
+        background: #FFF
+        color: #333
+        text-align: left
+        padding: 5px
+
+    .router-link:hover
+        color: black
+</style>

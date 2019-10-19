@@ -1,24 +1,33 @@
 <template>
   <div class="projects">
-    <Header/>
-    <main>
-      <component :is="currentPageComponent"></component>
-      <br><br><br>
-      <section style="margin:auto;max-width:1000px;border-top: 1px solid grey">
-        <br>
-        <div style="margin:0 3rem;">
-          change views:
-          <b-button @click="currentPageComponent='NewProject'" class="is-primary is-rounded is-size-6">New Project</b-button>
-          <b-button @click="currentPageComponent='JobView'" class="is-primary is-rounded is-size-6">View Job</b-button>
-          <b-button @click="currentPageComponent='ProjectView'" class="is-primary is-rounded is-size-6">View Project</b-button>
-          <h1>This is a project listing page</h1> <br><br>
-        </div>
-      </section>
-      <observer/>
-      <!-- If the observer is supposed to be only on the project listing page (not create new project) then this should go into ProjectListing.vue or something     -->
-    </main>
+      <Header/>
+      <transition appear name="fade">
+
+        <main>
+            <transition name="fade" mode="out-in">
+              <component :is="currentPageComponent"></component>
+            </transition>
+            <br><br><br>
+            <section style="margin:auto;max-width:1000px;border-top: 1px solid grey">
+              <br>
+              <div style="margin:0 3rem;">
+                change views:
+                <b-button @click="currentPageComponent='NewProject'" class="is-primary is-rounded is-size-6">New Project</b-button>
+                <b-button @click="currentPageComponent='JobView'" class="is-primary is-rounded is-size-6">View Job</b-button>
+                <b-button @click="currentPageComponent='ProjectView'" class="is-primary is-rounded is-size-6">View Project</b-button>
+                <h1>This is a project listing page</h1> <br><br>
+              </div>
+            </section>
+            <observer/>
+            <!-- If the observer is supposed to be only on the project listing page (not create new project) then this should go into ProjectListing.vue or something     -->
+          </main>
+      </transition>
   </div>
 </template>
+
+<style scoped>
+
+</style>
 
 <script>
 import Observer from "../components/Observer.vue"

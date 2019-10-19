@@ -1,6 +1,8 @@
 <template>
   <div>
       <section style="margin:auto;max-width:1100px;">
+          <transition appear name="fade">
+
           <div style="margin:0 3rem;">
 
               <p  class="is-family-title is-size-2 has-text-grey-dark" style="text-align:left;">
@@ -52,6 +54,7 @@
               </div>
 
           </div>
+          </transition>
       </section>
 
   </div>

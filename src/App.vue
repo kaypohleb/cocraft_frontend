@@ -2,7 +2,7 @@
   <div id="app">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
           rel="stylesheet" />
-      <router-view/>
+        <router-view/>
   </div>
 </template>
 
@@ -23,6 +23,11 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
 }
+
+.component-fade-enter-active, .component-fade-leave-active {
+    transition: opacity .3s ease;
+}
+
 #nav {
   padding: 30px;
 }

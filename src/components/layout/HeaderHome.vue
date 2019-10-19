@@ -1,19 +1,21 @@
 <template>
     <header class="header">
-        <div class="level is-hidden-mobile" style="padding: 1.4rem 0">
-            <router-link to="/" class="level-left" style="margin-left:1rem">
-                <img class="logo" style="height:50px"  src="../../assets/newlogo.png"/>
+        <div class="is-flex" style="padding: 1.4rem 0;justify-content: space-between">
+            <router-link to="/" style="margin-left:1vw">
+                <img class="logo" style="height:50px;"  src="../../assets/newlogo.png"/>
             </router-link>
-            <div class="level-right" style="margin-right:1rem">
-                <b-button @click="isComponentModalActive = true" class="ccgradientbutton slight-round is-family-title" style="border:none;padding:0 1.1rem;margin-right: 1rem">sign in</b-button>
-                <b-modal :active.sync="isComponentModalActive" has-modal-card trap-focus>
-            <modal-form v-bind="formProps"></modal-form>
-                </b-modal>
-                <a role="button">
-                    <i class="material-icons is-size-1 img-button-white" style="margin: 0 0.3rem">menu</i>
+            <span></span>
+            <span style="margin-right:1vw;display:flex;">
+                <b-button @click="isComponentModalActive = true" class="ccgradientbutton slight-round is-family-title" style="align-self:center;border:none;padding:0 1.1rem;margin-right: 1rem">sign in</b-button>
+                <a role="button" style="display:flex">
+                    <i class="material-icons is-size-1 img-button-white" style=";align-self:center">menu</i>
                 </a>
-            </div>
+            </span>
         </div>
+
+        <b-modal :active.sync="isComponentModalActive" has-modal-card trap-focus>
+            <modal-form v-bind="formProps"></modal-form>
+        </b-modal>
     </header>
 
 </template>

@@ -6,12 +6,12 @@
             <HeaderHome/>
             <div class="hero is-fullheight">
                 <div class="hero-body">
-                    <div class="container has-text-centered" style="max-width:55%">
+                    <div class="container has-text-centered" style="max-width:768px;margin:auto">
                         <transition appear>
                         <div class="columns" style="margin-bottom:10rem">
-                            <div class="column is-one-third" style="border-right:3px solid gray;border-radius: 2px">
-                                <p class="is-size-1 is-family-title has-text-white" style="text-align:left;line-height:3.4rem;font-size:1rem">
-                                    cultivate <span class="has-text-primary">projects</span> through <br> <span class="has-text-info">peer</span> <br> support
+                            <div class="column is-one-third" style="border-radius: 2px">
+                                <p id="cultivate" class="is-size-1 is-family-title has-text-white" style="line-height:3.4rem;font-size:1rem">
+                                    cultivate <span class="has-text-primary"><br>projects</span><br> through <br> <span class="has-text-info">peer</span> <br> support
                                 </p>
                             </div>
                             <div class="column is-two-thirds" style="padding:0 2.5rem">
@@ -63,6 +63,18 @@
 </template>
 
 <style scoped lang="sass">
+
+    @media only screen and (min-width: 769px)
+        #cultivate
+            text-align: left
+            border-right: 3px solid gray
+
+    @media only screen and (max-width: 768px)
+        #cultivate
+            padding: 10vh 10vw
+            border-bottom: 3px solid gray
+
+
     .herobg
         background-image: url('https://www.thebalancesmb.com/thmb/G1T99HhK7Wlbv85WC5zuVJIcgs4=/2121x1414/filters:fill(auto,1)/owner-standing-by-young-customers-at-table-in-restaurant-953943092-5c68fcf3c9e77c00012e0f0a.jpg')
         background-repeat: no-repeat

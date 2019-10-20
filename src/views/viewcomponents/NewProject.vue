@@ -1,5 +1,10 @@
+
 <template>
-  <div>
+  <div class="projects">
+      <Header/>
+      <transition appear name="fade">
+
+    <main>
       <section style="margin:auto;max-width:1100px;">
           <div style="margin:0 3rem;">
 
@@ -46,15 +51,18 @@
 
           </div>
       </section>
-
+    </main>
+      </transition>
   </div>
 </template>
 
 <script>
-
+import Header from "../../components/layout/Header.vue"
 export default {
     name: 'NewProject',
-    components: {}
+    components: {
+        Header
+    }
 }
 
 

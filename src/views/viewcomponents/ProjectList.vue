@@ -1,11 +1,17 @@
+
+
 <template>
-  <div>
+  <div class="projects">
+      <Header/>
+      <transition appear name="fade">
+
+    <main>
       <section style="margin:auto;max-width:1100px;">
 
           <div style="margin:0 3rem;">
 
               <b-button class="is-outlined is-rounded" style="padding:0 0.8rem"> <i class="material-icons" style="vertical-align:bottom;margin-right:0.2rem">remove_red_eye</i>view only followed ones</b-button>
-              <b-button class="ccgradientbutton is-rounded" style="margin-left:0.7rem;padding:0 1.4rem">add a project</b-button>
+              <router-link  to="/projects/new"><b-button class="ccgradientbutton is-rounded" style="margin-left:0.7rem;padding:0 1.4rem">add a project</b-button></router-link>
               <br>
               <div style="overflow-x:auto;">
                   <table id="subtable" width="100%" style="min-width:768px;display:block;table-layout:fixed;">
@@ -67,14 +73,19 @@
 
           </div>
       </section>
-
+    </main>
+    </transition>
   </div>
 </template>
 
 <script>
-
+import Header from '../../components/layout/Header.vue';
 export default {
+
     name: 'JobView',
+    components:{
+        Header
+    },
     data () {
         return {
             isComponentModalActive: false,
